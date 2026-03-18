@@ -6,7 +6,7 @@ import styles from './AnnouncementBar.module.css'
 const MESSAGES = [
   '🚚 Domicilio GRATIS en Neiva, Huila',
   '✨ Nueva Colección 2026 disponible',
-  '💛 Paga con WhatsApp · Envío el mismo día',
+  '💛 Paga con WhatsApp · Entrega de 3 a 5 días hábiles',
 ]
 
 export default function AnnouncementBar() {
