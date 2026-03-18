@@ -50,35 +50,29 @@ export default function Footer({ storeName = 'Salma Store', whatsapp, instagram,
         </div>
 
       {/* Links */}
-        <details className={`${styles.links} ${styles.accordion}`}>
-          <summary>
-            <h4 className={styles.linksTitle}>Información</h4>
-          </summary>
-          <ul className={styles.linksContent}>
+        <div className={styles.links}>
+          <h4 className={styles.linksTitle}>Información</h4>
+          <ul>
             <li><Link href="/privacidad">Política de Privacidad</Link></li>
             <li><Link href="/terminos">Términos y Condiciones</Link></li>
             <li><Link href="/devoluciones">Política de Devoluciones</Link></li>
             <li><Link href="/envios">Política de Envíos</Link></li>
           </ul>
-        </details>
+        </div>
 
-        <details className={`${styles.links} ${styles.accordion}`}>
-          <summary>
-            <h4 className={styles.linksTitle}>Categorías</h4>
-          </summary>
-          <ul className={styles.linksContent}>
+        <div className={styles.links}>
+          <h4 className={styles.linksTitle}>Categorías</h4>
+          <ul>
             <li><Link href="/?cat=Camisetas">Camisetas</Link></li>
             <li><Link href="/?cat=Vestidos">Vestidos</Link></li>
             <li><Link href="/?cat=Conjuntos">Conjuntos</Link></li>
             <li><Link href="/?cat=Accesorios">Accesorios</Link></li>
           </ul>
-        </details>
+        </div>
 
-        <details className={`${styles.links} ${styles.accordion}`}>
-          <summary>
-            <h4 className={styles.linksTitle}>Contacto</h4>
-          </summary>
-          <ul className={styles.linksContent}>
+        <div className={styles.links}>
+          <h4 className={styles.linksTitle}>Contacto</h4>
+          <ul>
              <li>
                <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 
@@ -100,7 +94,7 @@ export default function Footer({ storeName = 'Salma Store', whatsapp, instagram,
             )}
             {instagram && <li><a href={`https://instagram.com/${instagram}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 6 }}><Instagram size={16} /> Instagram</a></li>}
           </ul>
-        </details>
+        </div>
       </div>
 
       {/* Bottom bar */}
