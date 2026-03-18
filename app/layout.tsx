@@ -24,17 +24,11 @@ export const metadata: Metadata = {
     siteName: 'Salma Store',
     title: 'Salma Store — Moda con Personalidad',
     description: 'Descubre nuestra colección exclusiva de moda femenina con estilo único.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Salma Store' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Salma Store — Moda con Personalidad',
     description: 'Descubre nuestra colección exclusiva de moda femenina.',
-    images: ['/og-image.png'],
-  },
-  icons: {
-    icon: '/favicon.svg',
-    apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
 }
