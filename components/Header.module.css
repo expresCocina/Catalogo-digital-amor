@@ -1,0 +1,85 @@
+/* components/Header.module.css — Boutique Luxury */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(254,252,248,.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 1rem;
+  transition: box-shadow .3s;
+}
+.header:is(:hover) {
+  box-shadow: var(--shadow-xs);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+/* Botón carrito */
+.iconBtn {
+  background: none;
+  border: 1px solid var(--border-md);
+  color: var(--mauve);
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .25s; position: relative;
+}
+.iconBtn:hover {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Badge carrito */
+.badge {
+  position: absolute;
+  top: -4px; right: -4px;
+  background: var(--rose);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 700;
+  min-width: 17px; height: 17px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--ivory);
+  animation: fadeIn .2s ease;
+}
+
+/* Botón Admin */
+.adminBtn {
+  background: none;
+  border: 1px solid var(--border-md);
+  color: var(--muted);
+  padding: .4rem 1.1rem;
+  border-radius: 50px;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: .35rem;
+  transition: all .25s;
+}
+.adminBtn:hover {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 540px) {
+  .header { padding: 0 1rem; }
+}

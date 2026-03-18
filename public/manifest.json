@@ -1,0 +1,16 @@
+{
+  "name": "Salma Store",
+  "short_name": "Salma Store",
+  "description": "Catálogo digital de moda.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#5C2D3E",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

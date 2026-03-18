@@ -1,0 +1,124 @@
+/* components/Footer.module.css */
+.footer {
+  background: var(--deep);
+  color: rgba(255,255,255,.8);
+  margin-top: auto;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.brand {}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+.logo em { color: var(--gold-lt); font-style: italic; }
+
+.slogan {
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.socials {
+  display: flex;
+  gap: .65rem;
+  flex-wrap: wrap;
+}
+
+.social {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,.7);
+  transition: all .2s;
+}
+.social:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.linksTitle {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+  margin-bottom: 1rem;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+}
+
+.links ul li a {
+  font-size: .85rem;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.links ul li a:hover { color: #fff; }
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bottom p {
+  font-size: .78rem;
+  color: rgba(255,255,255,.45);
+}
+.bottom strong { color: rgba(255,255,255,.7); }
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.bottomLinks a {
+  color: rgba(255,255,255,.5) !important;
+  transition: color .2s;
+  font-size: .78rem;
+}
+.bottomLinks a:hover { color: #fff !important; }
+.bottomLinks span { color: rgba(255,255,255,.2); }

@@ -1,0 +1,80 @@
+/* components/AnnouncementBar.module.css */
+.bar {
+  position: relative;
+  width: 100%;
+  background: var(--deep);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+  overflow: hidden;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(184,146,74,.25);
+  z-index: 200;
+  flex-shrink: 0;
+}
+
+/* Marquee track */
+.track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+.bar:hover .track { animation-play-state: paused; }
+
+.item {
+  flex-shrink: 0;
+  padding: 0 1.5rem;
+  opacity: .9;
+}
+.item::after {
+  content: '◆';
+  margin-left: 3rem;
+  font-size: .55em;
+  color: var(--gold);
+  opacity: .7;
+}
+
+/* Gradients para desvanecimiento en los bordes */
+.bar::before,
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 60px;
+  z-index: 1;
+  pointer-events: none;
+}
+.bar::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--deep), transparent);
+}
+.bar::after {
+  right: 34px;
+  background: linear-gradient(270deg, var(--deep), transparent);
+}
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 34px;
+  background: rgba(255,255,255,.08);
+  border: none; border-left: 1px solid rgba(255,255,255,.1);
+  color: rgba(255,255,255,.6);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.close:hover { background: rgba(255,255,255,.16); color: #fff; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
