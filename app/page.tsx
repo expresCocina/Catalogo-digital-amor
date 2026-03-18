@@ -154,8 +154,16 @@ function StoreApp() {
         ) : filtered.length === 0 ? (
           <div className={styles.empty}>
             <div className={styles.emptyIco}><Shirt size={64} strokeWidth={1} color="var(--mauve)" /></div>
-            <h3 className="serif">{products.length ? 'Sin resultados' : 'Catálogo vacío'}</h3>
-            <p>{products.length ? 'Intenta con otra búsqueda o categoría' : 'Pronto habrá productos disponibles'}</p>
+            <h3 className="serif">
+              {selectedCat && selectedCat !== 'Camisetas' && selectedCat !== 'TODOS' 
+                ? 'Próximamente...' 
+                : products.length ? 'Sin resultados' : 'Catálogo vacío'}
+            </h3>
+            <p>
+              {selectedCat && selectedCat !== 'Camisetas' && selectedCat !== 'TODOS'
+                ? `Nuestra colección exclusiva de ${selectedCat.toLowerCase()} está en confección.`
+                : products.length ? 'Intenta con otra búsqueda o categoría' : 'Pronto habrá productos disponibles'}
+            </p>
           </div>
         ) : (
           filtered.map((p, i) => (
